@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【講座名】公式サイト｜株式会社Winstar</title>
+<meta name="description" content="彼女ができないと悩む男性のための、3ヶ月オンライン恋愛コーチング講座の公式サイトです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#141E30;
+    --navy-2:#1F2C45;
+    --lav:#EEEDF5;
+    --card:#FFFFFF;
+    --accent:#5155D9;
+    --ink:#333333;
+    --mute:#6B7280;
+    --line:#E5E4EE;
+    --todo:#FFF1B8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Noto Sans JP",sans-serif;
+    color:var(--ink);
+    line-height:1.8;
+    background:#fff;
+    font-size:16px;
+  }
+  .container{max-width:960px;margin:0 auto;padding:0 20px}
+
+  /* ====== TODO: 未確定箇所（黄色マーカー）。確定したら span.todo を外して文字を置き換える ====== */
+  .todo{background:var(--todo);padding:0 .3em;border-radius:4px}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    background:var(--navy);
+    color:#fff;
+    overflow:hidden;
+    padding:48px 0 96px;
+    min-height:72vh;
+    display:flex;
+    flex-direction:column;
+  }
+  .hero::before,.hero::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    pointer-events:none;
+  }
+  .hero::before{width:640px;height:640px;background:var(--navy-2);right:-160px;top:-200px}
+  .hero::after{width:420px;height:420px;background:#26334F;right:-60px;bottom:-140px}
+  .hero .container{position:relative;z-index:1;display:flex;flex-direction:column;flex:1}
+  .hero .brand{font-weight:700;font-size:15px;letter-spacing:.06em}
+  .hero .title-wrap{margin:auto 0;padding:72px 0 40px}
+  .hero h1{
+    font-size:clamp(34px,6vw,56px);
+    font-weight:900;
+    line-height:1.35;
+    letter-spacing:.02em;
+  }
+  .hero .lead{margin-top:24px;color:#C7CCDA;font-size:clamp(14px,2.2vw,17px)}
+
+  /* ---------- Sections ---------- */
+  section{padding:72px 0}
+  .section-title{
+    text-align:center;
+    font-size:26px;
+    font-weight:700;
+    margin-bottom:40px;
+    letter-spacing:.04em;
+  }
+  .bg-lav{background:var(--lav)}
+
+  .card{
+    background:var(--card);
+    border-radius:14px;
+    box-shadow:0 6px 24px rgba(20,30,48,.08);
+    padding:36px;
+  }
+
+  /* ---------- Course ---------- */
+  .course-head{font-size:22px;font-weight:700;margin-bottom:14px}
+  .course-head .num{color:var(--accent);font-weight:700;margin-right:.6em}
+  .course-intro{margin-bottom:28px}
+  .course-grid{
+    display:grid;
+    grid-template-columns:minmax(0,4fr) minmax(0,6fr);
+    gap:32px;
+    align-items:start;
+  }
+  .course-media{
+    background:#DFDEEA;
+    border-radius:10px;
+    aspect-ratio:4/3.4;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:var(--mute);
+    font-size:13px;
+    padding:16px;
+  }
+  .detail-label{font-weight:700;font-size:15px;margin-bottom:6px}
+  .detail-block{margin-bottom:22px}
+  .detail-block:last-child{margin-bottom:0}
+  .program-list{list-style:none}
+  .program-list li{
+    position:relative;
+    padding-left:1.2em;
+    margin-bottom:8px;
+    font-size:15px;
+  }
+  .program-list li::before{
+    content:"";
+    position:absolute;
+    left:0;top:.72em;
+    width:6px;height:6px;
+    border-radius:50%;
+    background:var(--ink);
+  }
+  .price{font-size:20px;font-weight:500}
+
+  /* ---------- Support ---------- */
+  .support-card{
+    display:grid;
+    grid-template-columns:72px 1fr;
+    gap:24px;
+    align-items:start;
+    margin-bottom:20px;
+  }
+  .support-card:last-of-type{margin-bottom:0}
+  .support-num{
+    color:var(--accent);
+    font-size:34px;
+    font-weight:900;
+    line-height:1;
+    padding-top:4px;
+  }
+  .support-title{font-size:17px;font-weight:700;margin-bottom:6px}
+  .support-desc{font-size:15px}
+  .support-note{margin-top:24px;font-size:12px;color:var(--mute);text-align:center}
+
+  /* ---------- Tokusho ---------- */
+  .tokusho table{
+    width:100%;
+    border-collapse:collapse;
+  }
+  .tokusho th,.tokusho td{
+    text-align:left;
+    vertical-align:middle;
+    padding:18px 12px;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    font-size:14.5px;
+    font-weight:400;
+  }
+  .tokusho th{
+    color:var(--mute);
+    width:32%;
+    min-width:150px;
+  }
+  .contact-note{text-align:center;margin-bottom:56px;font-size:15px}
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--navy);
+    color:#fff;
+    text-align:center;
+    font-size:13px;
+    padding:22px 0;
+  }
+
+  @media (max-width:720px){
+    section{padding:56px 0}
+    .card{padding:24px 20px}
+    .course-grid{grid-template-columns:1fr}
+    .support-card{grid-template-columns:52px 1fr;gap:16px}
+    .support-num{font-size:28px}
+    .tokusho th,.tokusho td{display:block;width:100%;padding:10px 4px;border:none}
+    .tokusho th{padding-bottom:0;border-top:1px solid var(--line);padding-top:14px}
+    .tokusho td{padding-top:2px;padding-bottom:14px}
+    .tokusho tr:last-child td{border-bottom:1px solid var(--line)}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="container">
+    <p class="brand">株式会社Winstar</p>
+    <div class="title-wrap">
+      <h1><span class="todo">【講座名】</span><br>公式サイト</h1>
+      <p class="lead">彼女ができないと悩む男性のための、3ヶ月オンライン恋愛コーチング</p>
+    </div>
+  </div>
+</header>
+
+<!-- ================= コース内容 ================= -->
+<section class="bg-lav" id="course">
+  <div class="container">
+    <h2 class="section-title">コース内容</h2>
+    <div class="card">
+      <h3 class="course-head"><span class="num">-01</span><span class="todo">【講座名】</span></h3>
+      <p class="course-intro">「彼女が欲しいのにできない」と悩む男性のための、3ヶ月間のオンライン恋愛コーチング講座です。外見・出会いの作り方・コミュニケーションを基礎から実践まで体系的に学び、専属コーチのサポートのもと、交際に向けた行動を一歩ずつ積み上げていきます。</p>
+      <div class="course-grid">
+        <div class="course-media">
+          画像プレースホルダ<br>（あとで写真に差し替え：この div を &lt;img&gt; に置き換えるだけ）
+        </div>
+        <div>
+          <div class="detail-block">
+            <p class="detail-label">学習プログラム</p>
+            <ul class="program-list">
+              <li>自己分析＆第一印象の改善：清潔感・ファッション・写真の整備（1カ月目）</li>
+              <li>出会いの創出：マッチングアプリのプロフィール設計・メッセージ実践（2カ月目）</li>
+              <li>デート実践＆関係構築：会話実践・振り返り指導・交際までのステップ設計（3カ月目）</li>
+            </ul>
+          </div>
+          <div class="detail-block">
+            <p class="detail-label">コース料金</p>
+            <p class="price">498,000 円（税込）</p>
+          </div>
+          <div class="detail-block">
+            <p class="detail-label">受講期間</p>
+            <p>3か月間（講義動画の視聴期間：ご購入日から<span class="todo">【6】</span>か月間）</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= サポート内容 ================= -->
+<section id="support">
+  <div class="container">
+    <h2 class="section-title">サポート内容</h2>
+    <div class="card support-card">
+      <div class="support-num">01</div>
+      <div>
+        <p class="support-title">オンラインコーチング</p>
+        <p class="support-desc">月<span class="todo">【◯】</span>回・1回<span class="todo">【◯】</span>分の個別セッション。専属コーチが行動計画の設計と振り返りを担当します。</p>
+      </div>
+    </div>
+    <div class="card support-card">
+      <div class="support-num">02</div>
+      <div>
+        <p class="support-title">講義動画</p>
+        <p class="support-desc">全<span class="todo">【◯】</span>本のオンライン講義。視聴期間はご購入日から<span class="todo">【6】</span>か月間です。</p>
+      </div>
+    </div>
+    <div class="card support-card">
+      <div class="support-num">03</div>
+      <div>
+        <p class="support-title">チャットサポート</p>
+        <p class="support-desc">受講期間中（3か月間）、専用チャットで質問・相談を受け付けます。</p>
+      </div>
+    </div>
+    <p class="support-note">※上記の回数・本数は正式決定後に更新します</p>
+  </div>
+</section>
+
+<!-- ================= 特定商取引法に基づく表示 ================= -->
+<section class="bg-lav" id="tokusho">
+  <div class="container">
+    <h2 class="section-title">特定商取引法に基づく表示</h2>
+    <p class="contact-note">ご不明点がございましたら、お気軽にお問い合わせください。</p>
+    <div class="card tokusho">
+      <table>
+        <tr><th>販売事業者名</th><td>株式会社Winstar</td></tr>
+        <tr><th>運営統括責任者</th><td>緑川晴郁</td></tr>
+        <tr><th>所在地</th><td>〒<span class="todo">【郵便番号】</span> 東京都新宿区新宿<span class="todo">【丁目・番地・ビル名 ※登記簿と同一表記】</span></td></tr>
+        <tr><th>電話番号</th><td><span class="todo">5050512971【※桁数要確認】</span>（お問い合わせ対応時間 10:00〜18:00）</td></tr>
+        <tr><th>連絡先／ホームページ</th><td><span class="todo">【本サイトの公開URL（https://○○○.vercel.app）を公開後に記入】</span></td></tr>
+        <tr><th>連絡先／電子メール</th><td><span class="todo">【問い合わせ用メールアドレス】</span></td></tr>
+        <tr><th>販売価格</th><td>498,000円（税込）</td></tr>
+        <tr><th>商品代金以外に必要な費用</th><td>なし</td></tr>
+        <tr><th>お支払方法</th><td>クレジットカード</td></tr>
+        <tr><th>お支払時期</th><td>ご契約後7日以内にお支払いください。</td></tr>
+        <tr><th>商品引渡し時期</th><td>決済完了後、24時間以内にメールにてご案内いたします。</td></tr>
+        <tr><th>返品・キャンセルについて</th><td>サービスの性質上、ご入金後の返品・返金は原則お受けしておりません。サービス提供開始前のキャンセルをご希望の場合は、ご購入日から<span class="todo">【8】</span>日以内にお問い合わせフォームよりご連絡ください。</td></tr>
+        <tr><th>中途解約について</th><td>本講座は一括販売のサービスであり、受講開始後の中途解約による返金は行っておりません。</td></tr>
+        <tr><th>不良品について</th><td>弊社のシステムトラブルなど弊社起因により講座の視聴・受講ができなかった場合には、7日以内に弊社までご連絡ください。状況確認後、改めてサービスを提供いたします。</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 株式会社Winstar</p>
+</footer>
+
+</body>
+</html>
