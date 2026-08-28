@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>特定商取引法に基づく表記｜垢抜け恋愛カレッジ</title>
+<meta name="description" content="彼女ができないと悩む男性のための、3ヶ月オンライン恋愛コーチング講座の公式サイトです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#141E30;
+    --navy-2:#1F2C45;
+    --lav:#EEEDF5;
+    --card:#FFFFFF;
+    --accent:#5155D9;
+    --ink:#333333;
+    --mute:#6B7280;
+    --line:#E5E4EE;
+    --todo:#FFF1B8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Noto Sans JP",sans-serif;
+    color:var(--ink);
+    line-height:1.8;
+    background:#fff;
+    font-size:16px;
+  }
+  .container{max-width:960px;margin:0 auto;padding:0 20px}
+
+  /* ====== TODO: 未確定箇所（黄色マーカー）。確定したら span.todo を外して文字を置き換える ====== */
+  .todo{background:var(--todo);padding:0 .3em;border-radius:4px}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    background:var(--navy);
+    color:#fff;
+    overflow:hidden;
+    padding:48px 0 96px;
+    min-height:72vh;
+    display:flex;
+    flex-direction:column;
+  }
+  .hero::before,.hero::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    pointer-events:none;
+  }
+  .hero::before{width:640px;height:640px;background:var(--navy-2);right:-160px;top:-200px}
+  .hero::after{width:420px;height:420px;background:#26334F;right:-60px;bottom:-140px}
+  .hero .container{position:relative;z-index:1;display:flex;flex-direction:column;flex:1}
+  .hero .brand{font-weight:700;font-size:15px;letter-spacing:.06em}
+  .hero .title-wrap{margin:auto 0;padding:72px 0 40px}
+  .hero h1{
+    font-size:clamp(34px,6vw,56px);
+    font-weight:900;
+    line-height:1.35;
+    letter-spacing:.02em;
+  }
+  .hero .lead{margin-top:24px;color:#C7CCDA;font-size:clamp(14px,2.2vw,17px)}
+
+  /* ---------- Sections ---------- */
+  section{padding:72px 0}
+  .section-title{
+    text-align:center;
+    font-size:26px;
+    font-weight:700;
+    margin-bottom:40px;
+    letter-spacing:.04em;
+  }
+  .bg-lav{background:var(--lav)}
+
+  .card{
+    background:var(--card);
+    border-radius:14px;
+    box-shadow:0 6px 24px rgba(20,30,48,.08);
+    padding:36px;
+  }
+
+  /* ---------- Course ---------- */
+  .course-head{font-size:22px;font-weight:700;margin-bottom:14px}
+  .course-head .num{color:var(--accent);font-weight:700;margin-right:.6em}
+  .course-intro{margin-bottom:28px}
+  .course-grid{
+    display:grid;
+    grid-template-columns:minmax(0,4fr) minmax(0,6fr);
+    gap:32px;
+    align-items:start;
+  }
+  .detail-label{font-weight:700;font-size:15px;margin-bottom:6px}
+  .detail-block{margin-bottom:22px}
+  .detail-block:last-child{margin-bottom:0}
+  .program-list{list-style:none}
+  .program-list li{
+    position:relative;
+    padding-left:1.2em;
+    margin-bottom:8px;
+    font-size:15px;
+  }
+  .program-list li::before{
+    content:"";
+    position:absolute;
+    left:0;top:.72em;
+    width:6px;height:6px;
+    border-radius:50%;
+    background:var(--ink);
+  }
+  .price{font-size:20px;font-weight:500}
+
+  /* ---------- Support ---------- */
+  .support-card{
+    display:grid;
+    grid-template-columns:72px 1fr;
+    gap:24px;
+    align-items:start;
+    margin-bottom:20px;
+  }
+  .support-card:last-of-type{margin-bottom:0}
+  .support-num{
+    color:var(--accent);
+    font-size:34px;
+    font-weight:900;
+    line-height:1;
+    padding-top:4px;
+  }
+  .support-title{font-size:17px;font-weight:700;margin-bottom:6px}
+  .support-desc{font-size:15px}
+  .support-note{margin-top:24px;font-size:12px;color:var(--mute);text-align:center}
+
+  /* ---------- Tokusho ---------- */
+  .tokusho table{
+    width:100%;
+    border-collapse:collapse;
+  }
+  .tokusho th,.tokusho td{
+    text-align:left;
+    vertical-align:middle;
+    padding:18px 12px;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    font-size:14.5px;
+    font-weight:400;
+  }
+  .tokusho th{
+    color:var(--mute);
+    width:32%;
+    min-width:150px;
+  }
+  .contact-note{text-align:center;margin-bottom:56px;font-size:15px}
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--navy);
+    color:#fff;
+    text-align:center;
+    font-size:13px;
+    padding:28px 0;
+  }
+  footer a{color:#C7CCDA;text-decoration:none;margin:0 10px}
+  footer a:hover{text-decoration:underline}
+  .footer-links{margin-bottom:12px}
+  .page-back{display:inline-block;margin-top:32px;color:var(--accent);text-decoration:none;font-size:14px}
+  .page-back:hover{text-decoration:underline}
+
+  @media (max-width:720px){
+    section{padding:56px 0}
+    .card{padding:24px 20px}
+    .course-grid{grid-template-columns:1fr}
+    .support-card{grid-template-columns:52px 1fr;gap:16px}
+    .support-num{font-size:28px}
+    .tokusho th,.tokusho td{display:block;width:100%;padding:10px 4px;border:none}
+    .tokusho th{padding-bottom:0;border-top:1px solid var(--line);padding-top:14px}
+    .tokusho td{padding-top:2px;padding-bottom:14px}
+    .tokusho tr:last-child td{border-bottom:1px solid var(--line)}
+  }
+  /* 条文ページ用スタイル */
+  .legal .container{max-width:820px}
+  .legal .card{line-height:1.9;padding:40px}
+  .legal .lead{margin-bottom:8px;color:var(--ink)}
+  .legal h2.chap{font-size:18px;font-weight:700;margin:36px 0 4px;padding-bottom:8px;border-bottom:2px solid var(--accent);color:var(--ink)}
+  .legal h3.art{font-size:15px;font-weight:700;margin:24px 0 6px;color:var(--ink)}
+  .legal p{margin-bottom:12px}
+  .legal ul,.legal ol{margin:8px 0 14px 1.4em}
+  .legal li{margin-bottom:6px}
+  .legal .info-table{width:100%;border-collapse:collapse;margin:12px 0}
+  .legal .info-table th,.legal .info-table td{text-align:left;vertical-align:top;padding:14px 12px;border-bottom:1px solid var(--line);font-size:14.5px;font-weight:400}
+  .legal .info-table th{color:var(--mute);width:32%;min-width:130px}
+  .legal .data-table{width:100%;border-collapse:collapse;margin:10px 0 18px;font-size:14px}
+  .legal .data-table th,.legal .data-table td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+  .legal .data-table th{background:var(--lav);font-weight:700}
+  .legal .note{color:var(--mute);font-size:13px;margin:6px 0 14px}
+  .legal .enact{margin-top:32px;color:var(--mute);font-size:13px}
+
+</style>
+</head>
+<body>
+
+<header class="hero" style="min-height:auto;padding:40px 0 48px;">
+  <div class="container">
+    <p class="brand">株式会社Winstar</p>
+    <div class="title-wrap" style="padding:28px 0 0;">
+      <h1 style="font-size:clamp(26px,5vw,38px);">特定商取引法に基づく表記</h1>
+    </div>
+  </div>
+</header>
+
+<section class="bg-lav legal">
+  <div class="container">
+    <div class="card">
+      <p class="lead">本表記は、株式会社Winstar（以下「当社」といいます。）が提供する「垢抜け恋愛カレッジ」（以下「本サービス」といいます。）に関し、特定商取引に関する法律第11条（通信販売についての広告）及び関連法令に基づき表示するものです。</p>
+      <p class="note">本サービスは、当社が指定するLP・申込フォーム経由で申込みを受け付けた後、オンライン会議システム（Zoom等）による個別面談を経て契約を締結する形式を含みます。</p>
+
+      <h2 class="chap">第1章 事業者情報</h2>
+      <table class="info-table">
+        <tr><th>販売業者</th><td>株式会社Winstar</td></tr>
+        <tr><th>運営統括責任者</th><td>緑川晴郁</td></tr>
+        <tr><th>所在地</th><td>東京都新宿区新宿（詳細な所在地は、ご請求をいただければ遅滞なく開示いたします。）</td></tr>
+        <tr><th>電話番号</th><td>お問い合わせは原則として電子メールにて受け付けております。電話でのお問い合わせをご希望の場合は、下記メールアドレスまでご請求いただければ、遅滞なく開示いたします。（お問い合わせ対応時間 10:00〜18:00）</td></tr>
+        <tr><th>メールアドレス</th><td>fuijharu7991world.m@gmail.com</td></tr>
+        <tr><th>販売URL</th><td>https://course-site-bay.vercel.app</td></tr>
+      </table>
+
+      <h2 class="chap">第2章 販売価格・支払いに関する事項</h2>
+      <h3 class="art">第1条（販売価格）</h3>
+      <table class="data-table">
+        <tr><th>サービス名</th><th>受講料金（税込）</th></tr>
+        <tr><td>垢抜け恋愛カレッジ（3ヶ月プログラム）</td><td>498,000円</td></tr>
+      </table>
+      <p class="note">※価格はすべて消費税10%を含む税込価格です。</p>
+
+      <h3 class="art">第2条（商品代金以外に必要となる費用）</h3>
+      <ul>
+        <li>銀行振込をご選択の場合の振込手数料（受講者ご負担）</li>
+        <li>本サービスの受講に必要なインターネット接続料、通信料（受講者ご負担）</li>
+        <li>オンラインセッション参加に必要な機器（PC、スマートフォン、タブレット、カメラ、マイク等）の購入・維持にかかる費用（受講者ご負担）</li>
+      </ul>
+
+      <h3 class="art">第3条（支払方法）</h3>
+      <ul>
+        <li>クレジットカード一括払い</li>
+        <li>銀行振込一括払い</li>
+      </ul>
+      <p>当社では分割払いの取扱いをしておりません。クレジットカード会社が提供する分割払いをご希望の場合は、ご利用のクレジットカード会社の規約に基づき、お客様ご自身でお手続きください。</p>
+      <p class="note">※クレジットカード番号及びセキュリティコード等の決済情報については、決済代行サービスのサーバーにおいて処理され、当社では保有しません。</p>
+
+      <h3 class="art">第4条（支払時期）</h3>
+      <p>契約締結後7日以内に、利用料金の全額を一括にてお支払いいただきます。</p>
+
+      <h2 class="chap">第3章 役務の提供に関する事項</h2>
+      <h3 class="art">第5条（役務の提供時期）</h3>
+      <ul>
+        <li>本プログラム（3ヶ月間のコーチングプログラム）：お申込み確定後に当社より別途ご案内する開講日から起算して3ヶ月間。</li>
+        <li>動画教材：ご購入日から起算して3ヶ月間視聴可能。</li>
+      </ul>
+
+      <h3 class="art">第6条（役務の内容）</h3>
+      <p>本サービスは、恋愛に関するコーチングを通じて受講者の自己変容と行動を支援するサービスであり、グループ講義、彼女役の女性とのロールプレイング及び添削フィードバック、モチベーション管理のための個別オンラインコーチング（全12回）、受講生限定の動画講義並びに専用LINEによるサポートを提供するものです。本サービスは、交際・結婚その他一切の結果を保証するものではありません。</p>
+
+      <h2 class="chap">第4章 申込みのキャンセル・中途解約及び返金に関する事項</h2>
+      <h3 class="art">第7条（プログラム開始前のキャンセル）</h3>
+      <p>本プログラム開始日（初回講義実施日）の前日までに、受講者が書面又は電磁的記録（お問い合わせフォーム又はメール）によりキャンセルを申し出た場合、当社は、利用料金から事務手数料（利用料金の10%相当額）を控除した金額を返金いたします。</p>
+
+      <h3 class="art">第8条（プログラム開始後の中途解約）</h3>
+      <p>プログラム開始日以降の中途解約については、原則として返金を行いません。ただし、次の各号に掲げる場合に限り、当社は、未提供分について比例的な返金を行います。</p>
+      <ol>
+        <li>当社の都合により本プログラムの相当部分が提供されないこととなった場合</li>
+        <li>プログラム開始日から起算して14日以内において、当社の判断により、受講者が本サービスの趣旨と適合しないとして当社から退会を勧告した場合（受講者の責めに帰すべき事由による場合を除く。）</li>
+      </ol>
+
+      <h3 class="art">第9条（返金を行わない場合）</h3>
+      <p>次の各号に掲げる場合、当社は、利用料金等の返金を行いません。</p>
+      <ol>
+        <li>受講者の重大な契約違反（暴言、他の受講者への迷惑行為等）による強制退会</li>
+        <li>受講者の連絡途絶又は無断離脱</li>
+        <li>受講者の自主退会その他受講者の責めに帰すべき事由による受講資格の失効</li>
+      </ol>
+
+      <h2 class="chap">第5章 その他の事項</h2>
+      <h3 class="art">第10条（動作環境）</h3>
+      <ul>
+        <li>安定したインターネット接続環境</li>
+        <li>Zoom等のオンライン会議を利用可能なPC、タブレット又はスマートフォン</li>
+        <li>カメラ及びマイクを利用可能な機器（ロールプレイング、個別コーチングへの参加のため）</li>
+        <li>動画教材視聴のための標準的なWebブラウザ（最新版を推奨）</li>
+      </ul>
+
+      <h3 class="art">第11条（受講にあたっての注意事項）</h3>
+      <ul>
+        <li>本サービスは、恋愛に関するコーチングを通じて受講者の自己変容及び行動を支援するサービスであり、交際、結婚、その他一切の結果を保証するものではありません。</li>
+        <li>本サービスは、医師の診断、治療その他の医療行為、及び心理療法・カウンセリングに代わるものではありません。</li>
+        <li>本サービスの効果には個人差があり、成果は受講者ご自身の取組み状況により異なります。</li>
+      </ul>
+
+      <h3 class="art">第12条（不良品・サービス不提供について）</h3>
+      <p>当社のシステムトラブルなど当社に起因する事由により講座の視聴・受講ができなかった場合には、7日以内に当社までご連絡ください。状況確認後、改めてサービスを提供いたします。</p>
+
+      <h3 class="art">第13条（個人情報の取扱い）</h3>
+      <p>本サービスのご利用に際してご提供いただいた個人情報の取扱いについては、別途定める<a href="./privacy.html" style="color:var(--accent);">プライバシーポリシー</a>に従います。</p>
+
+      <p class="enact">制定日：2026年10月1日<br>株式会社Winstar</p>
+
+      <a href="./index.html" class="page-back">← トップページに戻る</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="./index.html">トップページ</a>
+    <a href="./privacy.html">プライバシーポリシー</a>
+  </div>
+  <p>© 株式会社Winstar</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー｜垢抜け恋愛カレッジ</title>
+<meta name="description" content="彼女ができないと悩む男性のための、3ヶ月オンライン恋愛コーチング講座の公式サイトです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#141E30;
+    --navy-2:#1F2C45;
+    --lav:#EEEDF5;
+    --card:#FFFFFF;
+    --accent:#5155D9;
+    --ink:#333333;
+    --mute:#6B7280;
+    --line:#E5E4EE;
+    --todo:#FFF1B8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Noto Sans JP",sans-serif;
+    color:var(--ink);
+    line-height:1.8;
+    background:#fff;
+    font-size:16px;
+  }
+  .container{max-width:960px;margin:0 auto;padding:0 20px}
+
+  /* ====== TODO: 未確定箇所（黄色マーカー）。確定したら span.todo を外して文字を置き換える ====== */
+  .todo{background:var(--todo);padding:0 .3em;border-radius:4px}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    background:var(--navy);
+    color:#fff;
+    overflow:hidden;
+    padding:48px 0 96px;
+    min-height:72vh;
+    display:flex;
+    flex-direction:column;
+  }
+  .hero::before,.hero::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    pointer-events:none;
+  }
+  .hero::before{width:640px;height:640px;background:var(--navy-2);right:-160px;top:-200px}
+  .hero::after{width:420px;height:420px;background:#26334F;right:-60px;bottom:-140px}
+  .hero .container{position:relative;z-index:1;display:flex;flex-direction:column;flex:1}
+  .hero .brand{font-weight:700;font-size:15px;letter-spacing:.06em}
+  .hero .title-wrap{margin:auto 0;padding:72px 0 40px}
+  .hero h1{
+    font-size:clamp(34px,6vw,56px);
+    font-weight:900;
+    line-height:1.35;
+    letter-spacing:.02em;
+  }
+  .hero .lead{margin-top:24px;color:#C7CCDA;font-size:clamp(14px,2.2vw,17px)}
+
+  /* ---------- Sections ---------- */
+  section{padding:72px 0}
+  .section-title{
+    text-align:center;
+    font-size:26px;
+    font-weight:700;
+    margin-bottom:40px;
+    letter-spacing:.04em;
+  }
+  .bg-lav{background:var(--lav)}
+
+  .card{
+    background:var(--card);
+    border-radius:14px;
+    box-shadow:0 6px 24px rgba(20,30,48,.08);
+    padding:36px;
+  }
+
+  /* ---------- Course ---------- */
+  .course-head{font-size:22px;font-weight:700;margin-bottom:14px}
+  .course-head .num{color:var(--accent);font-weight:700;margin-right:.6em}
+  .course-intro{margin-bottom:28px}
+  .course-grid{
+    display:grid;
+    grid-template-columns:minmax(0,4fr) minmax(0,6fr);
+    gap:32px;
+    align-items:start;
+  }
+  .detail-label{font-weight:700;font-size:15px;margin-bottom:6px}
+  .detail-block{margin-bottom:22px}
+  .detail-block:last-child{margin-bottom:0}
+  .program-list{list-style:none}
+  .program-list li{
+    position:relative;
+    padding-left:1.2em;
+    margin-bottom:8px;
+    font-size:15px;
+  }
+  .program-list li::before{
+    content:"";
+    position:absolute;
+    left:0;top:.72em;
+    width:6px;height:6px;
+    border-radius:50%;
+    background:var(--ink);
+  }
+  .price{font-size:20px;font-weight:500}
+
+  /* ---------- Support ---------- */
+  .support-card{
+    display:grid;
+    grid-template-columns:72px 1fr;
+    gap:24px;
+    align-items:start;
+    margin-bottom:20px;
+  }
+  .support-card:last-of-type{margin-bottom:0}
+  .support-num{
+    color:var(--accent);
+    font-size:34px;
+    font-weight:900;
+    line-height:1;
+    padding-top:4px;
+  }
+  .support-title{font-size:17px;font-weight:700;margin-bottom:6px}
+  .support-desc{font-size:15px}
+  .support-note{margin-top:24px;font-size:12px;color:var(--mute);text-align:center}
+
+  /* ---------- Tokusho ---------- */
+  .tokusho table{
+    width:100%;
+    border-collapse:collapse;
+  }
+  .tokusho th,.tokusho td{
+    text-align:left;
+    vertical-align:middle;
+    padding:18px 12px;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    font-size:14.5px;
+    font-weight:400;
+  }
+  .tokusho th{
+    color:var(--mute);
+    width:32%;
+    min-width:150px;
+  }
+  .contact-note{text-align:center;margin-bottom:56px;font-size:15px}
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--navy);
+    color:#fff;
+    text-align:center;
+    font-size:13px;
+    padding:28px 0;
+  }
+  footer a{color:#C7CCDA;text-decoration:none;margin:0 10px}
+  footer a:hover{text-decoration:underline}
+  .footer-links{margin-bottom:12px}
+  .page-back{display:inline-block;margin-top:32px;color:var(--accent);text-decoration:none;font-size:14px}
+  .page-back:hover{text-decoration:underline}
+
+  @media (max-width:720px){
+    section{padding:56px 0}
+    .card{padding:24px 20px}
+    .course-grid{grid-template-columns:1fr}
+    .support-card{grid-template-columns:52px 1fr;gap:16px}
+    .support-num{font-size:28px}
+    .tokusho th,.tokusho td{display:block;width:100%;padding:10px 4px;border:none}
+    .tokusho th{padding-bottom:0;border-top:1px solid var(--line);padding-top:14px}
+    .tokusho td{padding-top:2px;padding-bottom:14px}
+    .tokusho tr:last-child td{border-bottom:1px solid var(--line)}
+  }
+  /* 条文ページ用スタイル */
+  .legal .container{max-width:820px}
+  .legal .card{line-height:1.9;padding:40px}
+  .legal .lead{margin-bottom:8px;color:var(--ink)}
+  .legal h2.chap{font-size:18px;font-weight:700;margin:36px 0 4px;padding-bottom:8px;border-bottom:2px solid var(--accent);color:var(--ink)}
+  .legal h3.art{font-size:15px;font-weight:700;margin:24px 0 6px;color:var(--ink)}
+  .legal p{margin-bottom:12px}
+  .legal ul,.legal ol{margin:8px 0 14px 1.4em}
+  .legal li{margin-bottom:6px}
+  .legal .info-table{width:100%;border-collapse:collapse;margin:12px 0}
+  .legal .info-table th,.legal .info-table td{text-align:left;vertical-align:top;padding:14px 12px;border-bottom:1px solid var(--line);font-size:14.5px;font-weight:400}
+  .legal .info-table th{color:var(--mute);width:32%;min-width:130px}
+  .legal .data-table{width:100%;border-collapse:collapse;margin:10px 0 18px;font-size:14px}
+  .legal .data-table th,.legal .data-table td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+  .legal .data-table th{background:var(--lav);font-weight:700}
+  .legal .note{color:var(--mute);font-size:13px;margin:6px 0 14px}
+  .legal .enact{margin-top:32px;color:var(--mute);font-size:13px}
+
+</style>
+</head>
+<body>
+
+<header class="hero" style="min-height:auto;padding:40px 0 48px;">
+  <div class="container">
+    <p class="brand">株式会社Winstar</p>
+    <div class="title-wrap" style="padding:28px 0 0;">
+      <h1 style="font-size:clamp(26px,5vw,38px);">プライバシーポリシー</h1>
+    </div>
+  </div>
+</header>
+
+<section class="bg-lav legal">
+  <div class="container">
+    <div class="card">
+      <p class="lead">株式会社Winstar（以下「当社」といいます。）は、当社が提供する「垢抜け恋愛カレッジ」（以下「本サービス」といいます。）の利用者及び申込者の個人情報の保護を重要な責務と認識し、個人情報の保護に関する法律（以下「個人情報保護法」といいます。）その他の関係法令を遵守するとともに、本プライバシーポリシー（以下「本ポリシー」といいます。）に従って、個人情報の適切な取扱い及び保護に努めます。</p>
+      <p>利用者は、本サービスの利用申込みを行うことにより、本ポリシーに同意したものとみなされます。</p>
+
+      <h2 class="chap">第1章 総則</h2>
+      <h3 class="art">第1条（定義）</h3>
+      <ol>
+        <li>「個人情報」とは、個人情報保護法第2条第1項に定める個人情報をいいます。</li>
+        <li>「コーチング記録」とは、受講者のロールプレイング映像・音声、コーチングセッションの記録、添削内容、チャット等でのやり取りその他本サービスの提供過程で当社が取得・記録する情報をいいます。</li>
+        <li>「業務委託先」とは、当社が本サービスの提供のために業務を委託する第三者をいい、講師、コーチ、彼女役スタッフ、撮影・編集スタッフ、システム提供事業者その他を含みます。</li>
+      </ol>
+
+      <h3 class="art">第2条（事業者情報）</h3>
+      <table class="info-table">
+        <tr><th>個人情報取扱事業者</th><td>株式会社Winstar</td></tr>
+        <tr><th>代表者</th><td>緑川晴郁</td></tr>
+        <tr><th>個人情報保護管理責任者</th><td>緑川晴郁</td></tr>
+        <tr><th>所在地</th><td>東京都新宿区新宿（詳細な所在地は、ご請求をいただければ遅滞なく開示いたします。）</td></tr>
+        <tr><th>お問い合わせ</th><td>fuijharu7991world.m@gmail.com（受付時間 10:00〜18:00）</td></tr>
+      </table>
+
+      <h2 class="chap">第2章 取得する個人情報と利用目的</h2>
+      <h3 class="art">第3条（取得する個人情報の項目）</h3>
+      <ul>
+        <li>氏名、フリガナ、生年月日、性別</li>
+        <li>住所、電話番号、メールアドレス</li>
+        <li>契約日、契約金額、支払方法その他の契約・取引情報</li>
+        <li>決済代行サービスを通じた決済情報</li>
+        <li>コーチング記録（ロールプレイング映像・音声、セッション記録、添削内容、チャット履歴等）</li>
+        <li>お問い合わせ内容、アンケート回答</li>
+        <li>ログ情報、Cookie情報、利用デバイス・ブラウザ種別、IPアドレス等のサービス利用情報</li>
+      </ul>
+      <p class="note">※クレジットカード番号及びセキュリティコード等の決済情報については、決済代行サービスのサーバーにおいて処理され、当社では保有しません。</p>
+
+      <h3 class="art">第4条（取得方法）</h3>
+      <p>当社は、受講者が申込フォーム、登録フォーム、アンケート、チャット、LINE、各種オンラインセッションその他当社が指定する方法を通じて提供する情報を取得するほか、Cookie等の技術により、法令上認められる範囲で自動的に情報を取得します。</p>
+
+      <h3 class="art">第5条（利用目的）</h3>
+      <ol>
+        <li>本サービス（講座）の提供、運営、品質管理及び改善のため</li>
+        <li>利用者からのお問い合わせ、ご相談及び苦情への対応のため</li>
+        <li>料金の請求・決済のため</li>
+        <li>本サービスに関する案内・お知らせの送付のため</li>
+        <li>本サービスの向上のための分析のため</li>
+        <li>本ポリシー及び利用規約に違反する行為への対応のため</li>
+        <li>法令又は公的機関の要請への対応のため</li>
+      </ol>
+
+      <h2 class="chap">第3章 第三者提供・委託</h2>
+      <h3 class="art">第6条（第三者提供の制限）</h3>
+      <p>当社は、法令に定める場合を除き、あらかじめ利用者の同意を得ることなく、個人情報を第三者に提供しません。</p>
+
+      <h3 class="art">第7条（業務委託先への提供）</h3>
+      <p>当社は、本サービスの提供に必要な範囲で、業務委託先に対して個人情報を提供することがあります。当社は、業務委託先との間で個人情報の適切な取扱いに関する契約を締結し、その取扱いを適切に監督します。</p>
+
+      <h3 class="art">第8条（外国にある第三者への提供）</h3>
+      <p>当社は、本サービスの運営にあたり、次の事業者が提供するサービスを利用しており、これに伴い個人情報が外国に所在するサーバーにおいて取扱われることがあります。</p>
+      <table class="data-table">
+        <tr><th>事業者名</th><th>所在国</th><th>利用目的</th></tr>
+        <tr><td>株式会社UnivaPayキャスト</td><td>日本</td><td>クレジットカード決済処理</td></tr>
+        <tr><td>Google LLC</td><td>米国</td><td>業務用クラウド（メール、ストレージ等）</td></tr>
+        <tr><td>LINEヤフー株式会社</td><td>日本（一部海外）</td><td>受講者への連絡、公式LINEによるサポート</td></tr>
+        <tr><td>株式会社Maneql（Lステップ）</td><td>日本</td><td>申込フォーム、動画配信、LINE配信管理</td></tr>
+      </table>
+      <p>外国にある第三者への個人情報の提供を行うにあたり、当社は、個人情報保護法第28条その他関係法令の定めに従い、必要な措置を講じます。各国における個人情報保護制度の概要は、個人情報保護委員会のウェブサイト（https://www.ppc.go.jp/）をご参照ください。</p>
+
+      <h2 class="chap">第4章 管理・開示等</h2>
+      <h3 class="art">第9条（安全管理措置）</h3>
+      <p>当社は、取得した個人情報の漏えい、滅失又はき損の防止その他の安全管理のために、組織的・人的・物理的・技術的に必要かつ適切な措置を講じ、これを従業者及び業務委託先に周知徹底します。</p>
+
+      <h3 class="art">第10条（保管期間）</h3>
+      <p>当社は、取得した個人情報を、次のとおり保管し、保管期間経過後は適切な方法により遅滞なく削除又は消去します。</p>
+      <table class="data-table">
+        <tr><th>情報の種別</th><th>保管期間</th></tr>
+        <tr><td>基本属性情報、サービス利用情報</td><td>受講資格の終了後5年間</td></tr>
+        <tr><td>契約・取引情報、会計関連情報</td><td>法定保管期間（原則7年間）</td></tr>
+        <tr><td>コーチング記録（ロールプレイング映像・音声等）</td><td>受講者から削除の申出があるまで（申出後は速やかに利用を停止。法令上・契約上保管が必要な場合を除く）</td></tr>
+        <tr><td>お問い合わせに関する記録</td><td>対応完了後3年間</td></tr>
+      </table>
+
+      <h3 class="art">第11条（開示・訂正・利用停止等の請求）</h3>
+      <p>利用者は、当社が保有する自己の保有個人データについて、個人情報保護法の定めに従い、利用目的の通知、開示、訂正・追加・削除、利用停止・消去、第三者提供の停止及び第三者提供記録の開示を請求することができます。請求は第13条の窓口までご連絡ください。当社は、本人確認のうえ、法令に従い対応いたします。</p>
+
+      <h3 class="art">第12条（未成年者の取扱い）</h3>
+      <p>本サービスは、満18歳以上の方のみが利用申込みを行うことができます。当社は、未成年者からの申込みを承諾しません。</p>
+
+      <h2 class="chap">第5章 Cookie・お問い合わせ・改定</h2>
+      <h3 class="art">第13条（Cookie及びアクセス解析）</h3>
+      <p>本サービスのサイト及びLPでは、利用状況の把握やサービス向上のため、Cookie及びアクセス解析ツールを利用することがあります。これらにより収集される情報には、原則として個人を特定する情報は含まれません。利用者は、ブラウザの設定によりCookieを無効化することができますが、その場合、本サービスの一部機能が正常に動作しない可能性があります。</p>
+
+      <h3 class="art">第14条（お問い合わせ窓口）</h3>
+      <table class="info-table">
+        <tr><th>事業者</th><td>株式会社Winstar</td></tr>
+        <tr><th>個人情報保護管理責任者</th><td>緑川晴郁</td></tr>
+        <tr><th>メールアドレス</th><td>fuijharu7991world.m@gmail.com</td></tr>
+        <tr><th>受付時間</th><td>10:00〜18:00（電子メールによる受付は24時間、回答は営業日に順次対応）</td></tr>
+      </table>
+
+      <h3 class="art">第15条（本ポリシーの改定）</h3>
+      <p>当社は、法令の制定改廃、社会情勢の変化その他の必要に応じて、本ポリシーを改定することがあります。改定後の本ポリシーは、本サイトに掲載した時点から効力を生じるものとします。</p>
+
+      <p class="enact">制定日：2026年10月1日<br>株式会社Winstar</p>
+
+      <a href="./index.html" class="page-back">← トップページに戻る</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="./index.html">トップページ</a>
+    <a href="./tokusho.html">特定商取引法に基づく表記</a>
+  </div>
+  <p>© 株式会社Winstar</p>
+</footer>
+
+</body>
+</html>
