@@ -28,11 +28,12 @@
   .list{list-style:none;padding:0;margin:22px 0}
   .list li{padding:11px 0;border-top:1px solid var(--line);font-size:14.5px;line-height:1.7}
   .list li:last-child{border-bottom:1px solid var(--line)}
-  .steps{list-style:none;padding:0;margin:26px 0 0;counter-reset:s}
-  .steps li{position:relative;padding:12px 0 12px 44px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.7;counter-increment:s}
+  .steps{list-style:none;padding:0;margin:28px auto 0;max-width:270px;counter-reset:s;text-align:left}
+  .steps li{position:relative;padding:16px 0 16px 44px;border-top:1px solid var(--line);counter-increment:s}
   .steps li:last-child{border-bottom:1px solid var(--line)}
-  .steps li::before{content:counter(s);position:absolute;left:4px;top:14px;width:26px;height:26px;border-radius:50%;background:#33456b;color:#fff;font-size:12px;line-height:26px;text-align:center;letter-spacing:0}
-  .steps small{display:block;font-size:12.5px;color:var(--mute);line-height:1.6;margin-top:2px}
+  .steps li::before{content:counter(s);position:absolute;left:2px;top:17px;width:28px;height:28px;border-radius:50%;background:#33456b;color:#fff;font-size:12.5px;line-height:28px;text-align:center;letter-spacing:0}
+  .steps b{display:block;font-size:16px;font-weight:600;line-height:1.6;letter-spacing:.06em;color:#33456b}
+  .steps small{display:block;font-size:13.5px;color:#4f5866;line-height:1.9;margin-top:4px}
   .note{margin:26px 0 0;padding:20px 0 0;border-top:1px solid var(--line)}
   .note h3{font-size:15px;font-weight:600;margin:0 0 8px;letter-spacing:.06em;color:#33456b}
   .note p{font-size:14px;color:#4f5866;line-height:2}
@@ -46,30 +47,31 @@
 <div class="phone">
 
 <!-- タイトル -->
-<div class="blk c" style="padding-bottom:8px">
+<div class="blk c" style="padding-bottom:28px">
   <p class="en">MESSAGE FROM HARE</p>
   <h1>審査フォームのご提出、<br>ありがとうございます。</h1>
   <div class="hair"></div>
   <p class="sub">審査の結果をお伝えします。<br>まずは、この動画を見てもらえたら嬉しいです。</p>
 </div>
 
-<!-- 動画（一時非表示）
+<!-- 動画（プレースホルダー。公開時は下のコメントを外してiframeを有効化） -->
 <div class="video">
   <div class="frame">
+    <!--
     <iframe src="https://www.youtube.com/embed/VIDEO_ID_PASS?rel=0" title="ハレからのお知らせ（審査結果）" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    -->
   </div>
 </div>
--->
 
 <!-- 次のステップ -->
 <div class="blk" style="padding:48px 30px 8px">
   <p class="en c">NEXT STEP</p>
   <h2 class="c">参加までの流れ</h2>
-  <p class="sub c">講座の詳しい内容と参加の手続きは、<br><span class="mark">20分の個別相談（Zoom）</span>でお伝えします。<br>下のボタンから、<br>ご都合のよい日時を選んでください。</p>
+  <p class="sub c">講座の詳しい内容と参加の手続きは、<br><span class="mark">20分の個別相談（Zoom）</span>でお伝えします。<br>下のボタンから、日時を選んでください。</p>
   <ol class="steps">
-    <li>個別相談の日時を予約する<small>ボタンから、空いている日時を選ぶだけです。</small></li>
-    <li>個別相談（Zoom・20分）<small>講座の中身と、進め方をお話しします。</small></li>
-    <li>参加手続きのご案内<small>相談の中で、参加までの流れをお伝えします。</small></li>
+    <li><b>個別相談を予約する</b><small>空いている日時を選ぶだけです。</small></li>
+    <li><b>個別相談（Zoom・20分）</b><small>講座の中身と、3ヶ月の進め方を<br>お話しします。</small></li>
+    <li><b>参加手続きのご案内</b><small>相談の中で、参加までの流れを<br>お伝えします。</small></li>
   </ol>
 </div>
 
