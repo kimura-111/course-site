@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>垢抜け恋愛カレッジ 第2期｜審査結果のお知らせ</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#111E33">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&family=Noto+Serif+JP:wght@400&display=swap" rel="stylesheet">
+<style>
+/* lp2（2期LP）と同じトークン。375px固定で組み、画面幅に合わせてzoomする */
+:root{
+  --navy:#111E33;      /* ベース */
+  --deep:#0B1424;      /* 外側の余白 */
+  --steel:#70849B;     /* アクセント */
+  --paper:#F5F5F1;     /* 文字・ボタン地 */
+  --mute:rgba(245,245,241,.62);
+  --soft:rgba(245,245,241,.75);
+  --rule:rgba(245,245,241,.25);
+  --serif:"Noto Serif JP","Noto Serif CJK JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Noto Sans JP","Noto Sans CJK JP","Hiragino Sans","Yu Gothic",sans-serif;
+  color-scheme:dark;
+}
+html,body{margin:0;padding:0;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{background:var(--deep);color:var(--paper);font-family:var(--sans);overflow-x:hidden}
+.wrap{width:375px;margin:0 auto;background:var(--navy);min-height:100vh}
+.lp{width:375px;background:var(--navy);color:var(--paper);font-weight:400;-webkit-font-smoothing:antialiased}
+.lp p,.lp h1,.lp h2,.lp h3{margin:0;font-weight:400}
+.serif{font-family:var(--serif);font-weight:400}
+.sub{color:var(--mute)}
+a{-webkit-tap-highlight-color:transparent}
+
+/* ヘッダー：lp2のFV上部と同じ一行 */
+.hd{display:flex;justify-content:space-between;align-items:baseline;padding:32px 32px 0}
+.hd-n{font-size:14px;letter-spacing:.14em}
+.hd-e{font-size:11px;letter-spacing:.1em;opacity:.75;margin-top:8px}
+.hd-k{font-size:11px;letter-spacing:.12em}
+
+/* タイトル */
+.ti{padding:56px 32px 32px}
+.ti h1{font-size:26px;line-height:1.7;letter-spacing:.04em;text-wrap:balance}
+.ti-rl{display:block;width:48px;height:1px;background:rgba(245,245,241,.45);margin-top:24px}
+.ti-ld{font-size:14px;line-height:2;letter-spacing:.04em;margin-top:24px}
+
+/* 動画枠（本番はコメント内のiframeに差し替え） */
+.vd{position:relative;width:375px;height:211px;background:var(--deep)}
+.vd iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vd-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;border-top:1px solid rgba(112,132,155,.4);border-bottom:1px solid rgba(112,132,155,.4)}
+.vd-pl{width:56px;height:56px;border-radius:50%;border:1px solid var(--steel);position:relative}
+.vd-pl::after{content:"";position:absolute;left:23px;top:19px;border-left:14px solid var(--paper);border-top:9px solid transparent;border-bottom:9px solid transparent}
+.vd-tx{font-size:11px;letter-spacing:.06em;color:var(--mute)}
+.tag{position:absolute;left:16px;top:16px;font-size:11px;letter-spacing:.06em;line-height:1;padding:4px 8px;background:var(--navy);color:var(--paper);border:1px solid var(--steel)}
+
+/* ボタン：lp2と同じピル型 */
+.cta{display:flex;align-items:center;gap:16px;height:56px;box-sizing:border-box;padding:0 8px;background:var(--paper);color:var(--navy);font-size:14px;letter-spacing:.06em;border-radius:999px;text-decoration:none}
+.cta:focus-visible,.fl:focus-visible{outline:2px solid var(--paper);outline-offset:4px}
+.cta-bd{flex:0 0 40px;width:40px;height:40px;box-sizing:border-box;border-radius:50%;border:1px solid var(--steel);color:var(--navy);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:11px;letter-spacing:0}
+.cta-t{flex:1;min-width:0;white-space:nowrap;text-align:center}
+.cta-t.tight{letter-spacing:.02em}
+.cta-ic{flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:var(--navy);position:relative}
+.cta-ic::after{content:"";position:absolute;left:15px;top:16px;width:7px;height:7px;border-top:1px solid var(--paper);border-right:1px solid var(--paper);transform:rotate(45deg)}
+.micro{font-size:11px;color:var(--mute);letter-spacing:.04em;margin-top:8px;line-height:1.8;text-align:center}
+.blk-cta{padding:32px 32px 0}
+
+/* 見出し・本文 */
+.eb{display:flex;align-items:center;gap:16px;font-family:var(--serif);font-size:11px;letter-spacing:.24em;color:var(--mute)}
+.ebl{display:block;width:120px;height:1px;background:rgba(245,245,241,.35)}
+.h2{font-size:26px;line-height:1.6;letter-spacing:.04em}
+.body{font-size:14px;line-height:2;letter-spacing:.04em}
+.sec{padding:64px 32px 0}
+
+/* こんな方へ（lp2のFOR YOU） */
+.fy-rl{display:block;width:48px;height:1px;background:rgba(245,245,241,.45);margin-top:32px}
+.fy-ls{display:flex;flex-direction:column;gap:16px;margin-top:32px}
+.fy-ls p{font-size:14px;line-height:2;letter-spacing:.06em}
+
+/* 締切の大きな日付（lp2の「40」と呼応） */
+.dl-n{font-family:var(--serif);font-size:88px;line-height:1;color:var(--steel);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.dl-l{font-family:var(--serif);font-size:19px;line-height:1.8;letter-spacing:.04em;margin-top:32px}
+.spec{margin-top:32px;border-top:1px solid var(--rule)}
+.spec-r{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--rule)}
+.spec-k{font-size:11px;letter-spacing:.12em;color:var(--mute)}
+.spec-v{font-family:var(--serif);font-size:19px;letter-spacing:.04em}
+
+/* 参加までの流れ（lp2と同じ縦線ステップ） */
+.st{position:relative;display:flex;flex-direction:column;gap:32px;margin-top:32px}
+.st-ln{position:absolute;left:15px;top:16px;bottom:40px;width:1px;background:var(--steel)}
+.st-i{display:flex;gap:16px;position:relative}
+.st-n{flex:0 0 32px;height:32px;box-sizing:border-box;border-radius:50%;border:1px solid var(--steel);background:var(--navy);color:var(--paper);font-size:14px;line-height:30px;text-align:center}
+.st-h{font-family:var(--serif);font-size:19px;line-height:1.5}
+.st-s{font-size:14px;line-height:1.8;color:var(--mute);margin-top:8px}
+
+/* 見送り：手紙 */
+.lt{padding:64px 32px 0;display:flex;flex-direction:column;gap:16px}
+.lt-sg{font-family:var(--serif);font-size:19px;margin-top:16px}
+
+.fl{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.more{display:block;text-align:center;font-size:14px;letter-spacing:.06em;margin-top:32px}
+.ft{margin-top:64px;padding:32px;border-top:1px solid rgba(112,132,155,.4);font-size:11px;line-height:2;color:var(--mute)}
+</style>
+</head>
+<body>
+<main class="wrap">
+<div class="lp">
+<header class="hd">
+  <div>
+    <p class="serif hd-n">垢抜け恋愛カレッジ</p>
+    <p class="serif hd-e">Akanuke Renai College</p>
+  </div>
+  <p class="hd-k">第2期</p>
+</header>
+<section class="ti">
+  <h1 class="serif">審査フォームのご提出、<br>ありがとうございます。</h1>
+  <span class="ti-rl"></span>
+  <p class="ti-ld">審査の結果をお伝えします。<br>まずは、この動画を<br>見てもらえたら嬉しいです。</p>
+</section>
+<div class="vd">
+  <!-- 動画差し替え：下の div.vd-ph を削除し、このコメントを外して VIDEO_ID を入れる（合格発表動画）
+  <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0" title="ハレからのお知らせ（審査結果）" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  -->
+  <div class="vd-ph" role="img" aria-label="ハレからのお知らせ（審査結果）（差し替え予定）">
+    <span class="vd-pl" aria-hidden="true"></span>
+    <p class="vd-tx">合格発表動画をここに</p>
+  </div>
+  <span class="tag">仮｜差し替え予定</span>
+</div>
+
+<section class="sec">
+  <p class="eb"><span>NEXT STEP</span><span class="ebl"></span></p>
+  <h2 class="serif h2" style="margin-top:16px">参加までの流れ</h2>
+  <p class="body" style="margin-top:16px">講座の詳しい内容と参加の手続きは、<br>20分の個別相談でお伝えします。</p>
+  <div class="st">
+    <span class="st-ln" aria-hidden="true"></span>
+    <div class="st-i"><span class="st-n">1</span><div><p class="st-h">個別相談を予約する</p><p class="st-s">空いている日時を選ぶだけです。<br>予約は◯/◯（◯）までです。</p></div></div>
+    <div class="st-i"><span class="st-n">2</span><div><p class="st-h">ハレと20分の相談</p><p class="st-s">Zoomで、講座の中身と<br>3ヶ月の進め方をお話しします。</p></div></div>
+    <div class="st-i"><span class="st-n">3</span><div><p class="st-h">参加手続きのご案内</p><p class="st-s">相談の中で、<br>参加までの流れをお伝えします。</p></div></div>
+  </div>
+</section>
+
+<section class="sec">
+  <a class="cta" href="#TIMEREX_URL"><span class="cta-bd">第2期</span><span class="cta-t tight">今すぐ個別相談を予約する</span><span class="cta-ic" aria-hidden="true"></span></a>
+  <p class="micro">予約の締切は◯/◯（◯）23:59です。<br>相談のあとに、参加するかを決めてください。</p>
+</section>
+<footer class="ft">
+  <p><a class="fl" href="https://course-site-bay.vercel.app/tokusho.html">特定商取引法に基づく表示</a> ／ <a class="fl" href="https://course-site-bay.vercel.app/privacy.html">プライバシーポリシー</a></p>
+  <p>運営：ハレ</p>
+</footer>
+</div>
+</main>
+<script>
+(function(){var w=document.querySelector('.wrap');function fit(){var v=document.documentElement.clientWidth;var z=Math.min(v,480)/375;w.style.zoom=z;}fit();window.addEventListener('resize',fit);})();
+</script>
+</body>
+</html>
