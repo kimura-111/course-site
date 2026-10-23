@@ -61,6 +61,12 @@ a{-webkit-tap-highlight-color:transparent}
 .cta-t.tight{letter-spacing:.02em}
 .cta-ic{flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:var(--navy);position:relative}
 .cta-ic::after{content:"";position:absolute;left:15px;top:16px;width:7px;height:7px;border-top:1px solid var(--paper);border-right:1px solid var(--paper);transform:rotate(45deg)}
+/* サブボタン：審査フォームより一段控えめな枠線のピル */
+.cta2{display:flex;align-items:center;height:56px;box-sizing:border-box;padding:0 8px 0 56px;margin-top:40px;border:1px solid rgba(245,245,241,.55);color:var(--paper);font-size:14px;letter-spacing:.06em;border-radius:999px;text-decoration:none}
+.cta2:focus-visible{outline:2px solid var(--paper);outline-offset:4px}
+.cta2-t{flex:1;min-width:0;white-space:nowrap;text-align:center}
+.cta2-ic{flex:0 0 40px;width:40px;height:40px;box-sizing:border-box;border-radius:50%;border:1px solid var(--steel);position:relative}
+.cta2-ic::after{content:"";position:absolute;left:14px;top:15px;width:7px;height:7px;border-top:1px solid var(--paper);border-right:1px solid var(--paper);transform:rotate(45deg)}
 .micro{font-size:11px;color:var(--mute);letter-spacing:.04em;margin-top:8px;line-height:1.8;text-align:center}
 .blk-cta{padding:32px 32px 0}
 
@@ -75,6 +81,19 @@ a{-webkit-tap-highlight-color:transparent}
 .fy-rl{display:block;width:48px;height:1px;background:rgba(245,245,241,.45);margin-top:32px}
 .fy-ls{display:flex;flex-direction:column;gap:16px;margin-top:32px}
 .fy-ls p{font-size:14px;line-height:2;letter-spacing:.06em}
+/* このような方へ：チェックリスト（やりたいこと＝明朝で大きく、状況＝小さく） */
+.ck{list-style:none;margin:32px 0 0;padding:0;border-top:1px solid var(--rule)}
+.ck li{display:flex;align-items:flex-start;padding:20px 0;border-bottom:1px solid var(--rule)}
+.ck li>div{flex:1;min-width:0;margin-left:16px}
+.ck-b{flex:0 0 22px;width:22px;height:22px;box-sizing:border-box;border:1px solid var(--steel);margin-top:5px;position:relative}
+.ck-b::after{content:"";position:absolute;left:6px;top:2px;width:6px;height:11px;border-right:1.5px solid var(--paper);border-bottom:1.5px solid var(--paper);transform:rotate(45deg)}
+.ck-m{font-family:var(--serif);font-size:19px;line-height:1.6;letter-spacing:.03em}
+.ck-s{font-size:13px;line-height:1.8;letter-spacing:.04em;color:var(--mute);margin-top:4px!important}
+/* 安心の一文：オフホワイトの帯（lp2のメッセージ帯と同じ反転） */
+.ok{margin-top:48px;background:var(--paper);color:var(--navy);padding:48px 32px;text-align:center}
+.ok-m{font-family:var(--serif);font-size:24px;line-height:1.7;letter-spacing:.04em}
+.ok-rl{display:block;width:32px;height:1px;background:var(--steel);margin:20px auto 0}
+.ok-s{font-size:14px;line-height:2;letter-spacing:.04em;margin-top:20px!important}
 
 /* 締切の大きな日付（lp2の「40」と呼応） */
 .dl-n{font-family:var(--serif);font-size:88px;line-height:1;color:var(--steel);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
@@ -133,14 +152,12 @@ a{-webkit-tap-highlight-color:transparent}
 
 <section class="sec">
   <p class="eb"><span>FOR YOU</span><span class="ebl"></span></p>
-  <h2 class="serif h2" style="margin-top:16px">こんな方へ。</h2>
-  <span class="fy-rl"></span>
-  <div class="fy-ls">
-    <p>動画は見てきた。<br>次は行動したい。</p>
-    <p>女性と話すのが苦手。<br>だから練習したい。</p>
-    <p>「自分の場合」を知りたい。</p>
-  </div>
-  <p class="body" style="margin-top:32px">今のスペックは関係ありません。<br>彼女いない歴＝年齢でも大丈夫。</p>
+  <h2 class="serif h2" style="margin-top:16px">このような方へ。</h2>
+  <ul class="ck">
+    <li><span class="ck-b" aria-hidden="true"></span><div><p class="ck-m">次は、行動したい。</p><p class="ck-s">動画は見てきた。</p></div></li>
+    <li><span class="ck-b" aria-hidden="true"></span><div><p class="ck-m">女性と話す練習がしたい。</p><p class="ck-s">話すのが苦手だから。</p></div></li>
+    <li><span class="ck-b" aria-hidden="true"></span><div><p class="ck-m">「自分の場合」を知りたい。</p><p class="ck-s">動画の内容を、自分に当てはめたい。</p></div></li>
+  </ul>
 </section>
 
 <section class="sec">
@@ -156,7 +173,7 @@ a{-webkit-tap-highlight-color:transparent}
 <section class="sec">
   <a class="cta" href="#FORM_URL"><span class="cta-bd">第2期</span><span class="cta-t">審査フォームを記入する</span><span class="cta-ic" aria-hidden="true"></span></a>
   <p class="micro">提出は、申し込みの確定ではありません。</p>
-  <a class="fl more" href="#LP_URL">講座の詳細を見る</a>
+  <a class="cta2" href="#LP_URL"><span class="cta2-t">講座の詳細を見る</span><span class="cta2-ic" aria-hidden="true"></span></a>
 </section>
 <footer class="ft">
   <p><a class="fl" href="https://course-site-bay.vercel.app/tokusho.html">特定商取引法に基づく表示</a> ／ <a class="fl" href="https://course-site-bay.vercel.app/privacy.html">プライバシーポリシー</a></p>
